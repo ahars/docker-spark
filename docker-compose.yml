@@ -22,7 +22,8 @@ master:
     - 8080:8080
   volumes:
     - ./conf/master:/conf
-    - ./data:/tmp/data
+    - ./data:/data
+    - ./jars:/jars
 
 worker:
   build: .
@@ -48,4 +49,5 @@ worker:
     - 8081:8081
   volumes:
     - ./conf/worker:/conf
-    - ./data:/tmp/data
+    - ./data:/data
+    - ./jars:/jars
